@@ -1,0 +1,19 @@
+div{
+    width: 100vh;
+    height: 4.9vw;
+    transform-origin: top left;
+    position: relative;
+    left: 0;
+    top: 100%;
+    transform: rotate(-90deg);  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+h1{
+    text-align: center;
+    margin: auto;
+    color: white;
+
+}
