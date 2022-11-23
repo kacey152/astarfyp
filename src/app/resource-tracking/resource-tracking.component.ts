@@ -13,35 +13,21 @@ import Stats from 'three/examples/jsm/libs/stats.module'
 
 export class ResourceTrackingComponent implements OnInit,AfterViewInit {
   @ViewChild('canvas') //private canvasRef: ElementRef;
-
-  private model: any;
-  private loader = new GLTFLoader();
-  private scene: THREE.Scene;
-
-  //Scene
-  private createScene() {
-    this.scene = new THREE.Scene();
-    this.scene.background = new THREE.Color(0xd4d4d8);
-    this.loader.load('assets/Inkjet_Printer_30%2', ( gltf: GLTF ) =>{
-      this.model = gltf.scene.children[0];
-      console.log(this.model);
-      var box = new THREE.Box3().setFromObject(this.model);
-      box.getCenter(this.model.position); //resets mesh position
-      this.model.position.multiplyScalar(-1);
-      this.scene.add(this.model);
-    })
-  };
+  scene = new THREE.Scene();
+  camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
+  
+  renderer = new THREE.WebGLRenderer();
 
   
   constructor() { 
-    this.scene = new THREE.Scene();
   }
 
   ngOnInit(): void {
   }
 
   ngAfterViewInit(): void {
-    this.createScene()
+    this.renderer.setSize( window.innerWidth, window.innerHeight );
+    document.body.appendChild( this.renderer.domElement );
   }
 
 }
