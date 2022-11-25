@@ -7,6 +7,7 @@ import { ProductionTrackingComponent } from './production-tracking/production-tr
 import { SideHeadingComponent } from './side-heading/side-heading.component';
 import { SalesOrderTrackingComponent } from './sales-order-tracking/sales-order-tracking.component';
 import { ResourceTrackingComponent } from './resource-tracking/resource-tracking.component';
+import { ProductionTrackingBComponent } from './production-tracking-b/production-tracking-b.component';
 
 
 @NgModule({
@@ -16,6 +17,7 @@ import { ResourceTrackingComponent } from './resource-tracking/resource-tracking
     SideHeadingComponent,
     SalesOrderTrackingComponent,
     ResourceTrackingComponent,
+    ProductionTrackingBComponent,
   ],
   imports: [
     BrowserModule,

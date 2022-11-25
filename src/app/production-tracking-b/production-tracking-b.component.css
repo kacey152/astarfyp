@@ -1,0 +1,37 @@
+.container{
+    display: grid;
+    grid-template-columns: 5% 95%;
+    width: auto;
+    height:100vh;
+    background-color: #14181b;
+}
+
+.item1{
+    background-color: #25343F;
+}
+
+.item2{
+    margin: 1%;
+    
+    color: #b2e2dc;
+    display: grid;
+    grid-template-rows: 10% 43% 43%;
+    row-gap: 2%;
+}
+
+.item2a{
+    margin: 0;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid lightslategray;
+}
+
+.item2b{
+    border: 1px solid white;
+}
+
+.item2c{
+    border: 1px solid white;
+}
+
+
