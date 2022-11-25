@@ -7,6 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class SalesOrderTrackingComponent implements OnInit {
   @Input() processCustomer!: string;
+  
   constructor() {
    }
 

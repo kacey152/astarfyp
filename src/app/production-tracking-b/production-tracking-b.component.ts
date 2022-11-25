@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./production-tracking-b.component.css']
 })
 export class ProductionTrackingBComponent implements OnInit {
-
+  orderNumber: String = "SAMPLE"
   constructor() { }
 
   ngOnInit(): void {
