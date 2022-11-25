@@ -8,6 +8,7 @@ import { SideHeadingComponent } from './side-heading/side-heading.component';
 import { SalesOrderTrackingComponent } from './sales-order-tracking/sales-order-tracking.component';
 import { ResourceTrackingComponent } from './resource-tracking/resource-tracking.component';
 import { ProductionTrackingBComponent } from './production-tracking-b/production-tracking-b.component';
+import { WorkOrderListComponent } from './work-order-list/work-order-list.component';
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import { ProductionTrackingBComponent } from './production-tracking-b/production
     SalesOrderTrackingComponent,
     ResourceTrackingComponent,
     ProductionTrackingBComponent,
+    WorkOrderListComponent,
   ],
   imports: [
     BrowserModule,
