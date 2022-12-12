@@ -26,4 +26,45 @@
     border: 1px solid white;
 }
 
+.col1{
+    width:30%;
+}
+
+.col2{
+    width:50%;
+}
+
+.col3{
+    width:10%;
+}
+
+.col4{
+    width:10%;
+}
+
+table{
+    margin: auto;
+    width:95%;
+    border-collapse: collapse;
+}
+
+tr{
+    border-bottom: 1px solid lightslategray;
+    text-align: left;
+}
+
+th, td{
+    padding: 15px;
+}
+
+th{
+    color: lightslategray;
+}
+
+td{
+    color: white;
+}
+
+
+
 
