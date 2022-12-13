@@ -29,12 +29,11 @@ export class ProgressBarComponent implements OnInit {
     }
   }
 
-  getFillRate(percentage: number) {
-    if (this.performanceType === "fill"){
-      var progressColour: String = percentage >= 90? "green" :
+  getPercentage(percentage: number) {
+    let progressColour: String = percentage >= 90? "green" :
       percentage >= 80? "yellow" :
-        "red"
-    }
+      "red"
+    
     let style = {
       'left': (percentage-3) + '%', 'color': progressColour
     }

@@ -1,7 +1,7 @@
 <div class="progress-bar"></div>
 <span class="marker" [ngStyle]="{'left': (percentage-1) + '%'}"></span>
 <div class = percentageContainer>
-    <span class="percentage" [ngStyle]="getFillRate(percentage)">
+    <span class="percentage" [ngStyle]="getPercentage(percentage)">
         {{percentage}}%
     </span>
 </div>

@@ -53,32 +53,3 @@ th{
 td{
     color: white;
 }
-
-.fillrate-progress-bar, .turns-progress-bar{
-    background: linear-gradient(to right, red 0%, yellow 80%, green 90%);
-    border: 1px solid white;
-    min-height: 10px;
-}
-.percentage{
-    position: relative;
-    color:white;
-    width: 2.5em;
-    bottom: 1em;
-  }
-
-  .percentageContainer{
-    height: 0;
-  }
-
-  .marker{
-    position: relative;
-    display: inline-block;
-    background-color: white;
-    bottom: 0.9em;
-    width: 5px;
-    height: 1em;
-  }
-
-
-
-
