@@ -11,7 +11,7 @@ import { Component, OnInit, } from '@angular/core';
 
 
 export class ProductionInventoryComponent implements OnInit {
-  progressValue: number = 50;
+  progressValue: number = 30;
   constructor() { }
 
   ngOnInit(): void {

@@ -26,21 +26,10 @@
     border: 1px solid white;
 }
 
-.col1{
-    width:30%;
+.col1, .col2, .col3, .col4{
+    width:25%;
 }
 
-.col2{
-    width:50%;
-}
-
-.col3{
-    width:10%;
-}
-
-.col4{
-    width:10%;
-}
 
 table{
     margin: auto;
@@ -63,6 +52,12 @@ th{
 
 td{
     color: white;
+}
+
+.fillrate-progress-bar, .turns-progress-bar{
+    background: linear-gradient(to right, red 0%, yellow 80%, green 90%);
+    border: 1px solid white;
+    min-height: 10px;
 }
 
 
