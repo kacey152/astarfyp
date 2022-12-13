@@ -13,34 +13,41 @@
                     <tr>
                         <td>Overall</td>
                         <td>
-                            <div class="fillrate-progress-bar"></div>
+                            <app-progress-bar category="overall" performanceType="fill"></app-progress-bar>
                         </td>
                         
                         <td>
-                            <div class="turns-progress-bar"></div>
+                            <app-progress-bar category="overall" performanceType="turns"></app-progress-bar>
                         </td>
                         
-                        <td></td>
+                        <td>
+                            <app-progress-bar category="overall" performanceType="value"></app-progress-bar>
+                        </td>
                     </tr>
                     <tr>
                         <td>Semi Finished (MTS)</td>
                         <td>
-                            <div class="fillrate-progress-bar"></div>
+                            <app-progress-bar category="semifinished" performanceType="fill"></app-progress-bar>
+
                         </td>
                         <td>
-                            <div class="turns-progress-bar"></div>
+                            <app-progress-bar category="semifinished" performanceType="turns"></app-progress-bar>
                         </td>
-                        <td></td>
+                        <td>
+                            <app-progress-bar category="semifinished" performanceType="value"></app-progress-bar>
+                        </td>
                     </tr>
                     <tr>
                         <td>Raw Materials</td>
                         <td>
-                            <div class="fillrate-progress-bar"></div>
+                            <app-progress-bar category="raw" performanceType="fill"></app-progress-bar>
                         </td>
                         <td>
-                            <div class="turns-progress-bar"></div>
+                            <app-progress-bar category="raw" performanceType="turns"></app-progress-bar>
                         </td>
-                        <td></td>
+                        <td>
+                            <app-progress-bar category="raw" performanceType="value"></app-progress-bar>
+                        </td>
                     </tr>
             
             

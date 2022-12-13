@@ -12,6 +12,7 @@ import { ProductionTrackingBComponent } from './components/production-tracking-b
 import { WorkOrderListComponent } from './components/work-order-list/work-order-list.component';
 import { ProductionInventoryComponent } from './components/production-inventory/production-inventory.component';
 import { ProductionInventoryBComponent } from './components/production-inventory-b/production-inventory-b.component';
+import { ProgressBarComponent } from './components/progress-bar/progress-bar.component';
 
 
 @NgModule({
@@ -25,6 +26,7 @@ import { ProductionInventoryBComponent } from './components/production-inventory
     WorkOrderListComponent,
     ProductionInventoryComponent,
     ProductionInventoryBComponent,
+    ProgressBarComponent,
   ],
   imports: [
     BrowserModule,
