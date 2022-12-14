@@ -24,6 +24,26 @@
 .item3{
     margin: 1%;
     border: 1px solid white;
+    display: grid;
+    grid-template-rows: 10% 80%;
+    grid-row-gap: 5%;
+
+}
+
+
+.item3b{
+
+    display: grid;
+    grid-template-columns: 50% 50%;
+    
+}
+
+.canvasHolder{
+    border: 1px solid yellow;
+}
+
+.graph{
+    margin:auto;
 }
 
 .col1, .col2, .col3, .col4{
@@ -53,3 +73,4 @@ th{
 td{
     color: white;
 }
+

@@ -1,0 +1,8 @@
+.chart-container{
+    background-color: rgb(3, 0, 15);
+    max-width: 98%;
+    max-height: 98%;
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+}
