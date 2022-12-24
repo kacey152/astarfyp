@@ -1,1 +1,23 @@
-<p>production-inventory-b works!</p>
+<table>
+    <tr>
+        <th class="col1"></th>
+        <th class="col2">Fill Rate</th>
+        <th class="col3">Turns</th>
+        <th class="col4">Value</th>
+    </tr>
+
+    <tr>
+        <td>Overall</td>
+        <td>
+            <app-progress-bar category="overall" performanceType="fill"></app-progress-bar>
+        </td>
+        
+        <td>
+            <app-progress-bar category="overall" performanceType="turns"></app-progress-bar>
+        </td>
+        
+        <td>
+            <app-progress-bar category="overall" performanceType="value"></app-progress-bar>
+        </td>
+    </tr>
+</table>
