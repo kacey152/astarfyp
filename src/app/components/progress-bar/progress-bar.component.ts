@@ -31,7 +31,7 @@ export class ProgressBarComponent implements OnInit {
 
   ngOnInit(): void {
       //for testing, delete once done
-    setInterval(() => this.manageProgress(), 150);
+    //setInterval(() => this.manageProgress(), 150);
     this.value = this.productionInventory.getValue(this.performanceType, this.category)
     this.percentage = this.getPercentage()
     this.unit = this.performanceType == "fill"? "%" :
@@ -39,13 +39,13 @@ export class ProgressBarComponent implements OnInit {
   }
 
   //for testing, delete once done
-  manageProgress() {
+  /* manageProgress() {
     if (this.percentage === 100) {
       this.percentage = 0;
     } else {
       this.percentage = this.percentage + 1;
     }
-  }
+  } */
 
   getPercentageStyle(percentage: number) {
     let progressColour: String = percentage >= 90? "green" :

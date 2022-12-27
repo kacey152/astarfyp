@@ -1,0 +1,37 @@
+.container{
+    width: auto;
+    height:100vh;
+    background-color: #14181b;
+    color: #b2e2dc;
+    display: grid;
+    grid-template-rows: 10% 43% 43%;
+    row-gap: 2%;
+}
+
+.col1, .col2, .col3, .col4{
+    width:25%;
+}
+
+
+table{
+    margin: auto;
+    width:95%;
+    border-collapse: collapse;
+}
+
+tr{
+    border-bottom: 1px solid lightslategray;
+    text-align: left;
+}
+
+th, td{
+    padding: 15px;
+}
+
+th{
+    color: lightslategray;
+}
+
+td{
+    color: white;
+}

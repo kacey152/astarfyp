@@ -11,7 +11,7 @@ const routes: Routes = [
   { path: 'production-tracking-b', component: ProductionTrackingBComponent },
   { path: 'resource-tracking', component: ResourceTrackingComponent },
   { path: 'production-inventory', component: ProductionInventoryComponent },
-  { path: 'production-inventory-bk', component: ProductionInventoryBComponent },
+  { path: 'production-inventory-b', component: ProductionInventoryBComponent },
 ];
 
 @NgModule({
