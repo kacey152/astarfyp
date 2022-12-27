@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-production-inventory-b',
   templateUrl: './production-inventory-b.component.html',

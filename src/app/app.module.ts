@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
+import { NgCircleProgressModule } from 'ng-circle-progress';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -34,6 +35,15 @@ import { PerformanceGraphComponent } from './components/performance-graph/perfor
     BrowserModule,
     AppRoutingModule,
     MatProgressBarModule,
+    NgCircleProgressModule.forRoot({
+      // Optional properties
+      radius: 100,
+      outerStrokeWidth: 16,
+      innerStrokeWidth: 8,
+      outerStrokeColor: "#78C000",
+      innerStrokeColor: "#C7E596",
+      animationDuration: 300
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]

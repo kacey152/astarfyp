@@ -4,8 +4,36 @@
     background-color: #14181b;
     color: #b2e2dc;
     display: grid;
-    grid-template-rows: 10% 43% 43%;
+    grid-template-rows: 10% 30% 50%;
     row-gap: 2%;
+}
+
+.item1{
+    padding: 1%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid lightslategray;
+}
+
+.item2{
+    margin: 1%;
+    border: 1px solid white;
+}
+
+.item3{
+    margin: 1%;
+    border: 1px solid white;
+    display: grid;
+    grid-template-rows: 10% 80%;
+    grid-row-gap: 5%;
+
+}
+
+
+.item3b{
+    display: grid;
+    grid-template-columns: 50% 50%;
 }
 
 .col1, .col2, .col3, .col4{
