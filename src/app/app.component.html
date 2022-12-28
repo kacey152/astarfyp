@@ -2,12 +2,42 @@
 
   <h1>{{ title }}</h1>
 
-  <nav>
-    <a routerLink="production-tracking">Production Tracking</a>
-    <a routerLink="production-tracking-b">Production Tracking B</a>
-    <a routerLink="resource-tracking">Resource Tracking</a>
-    <a routerLink="production-inventory">Production Inventory</a>
-    <a routerLink="production-inventory-b">Production Inventory B</a>
+  <nav class="navbar">
+    <div class="dropdown">
+      <button class="dropbtn">Production Tracking 
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a routerLink="production-tracking">Production Tracking</a>
+        <a routerLink="production-tracking-b">Production Tracking B</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn">Resource Tracking 
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a routerLink="resource-tracking">Resource Tracking</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn">Production Inventory 
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a routerLink="production-inventory">Production Inventory</a>
+        <a routerLink="production-inventory-b">Production Inventory B</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn">Resource Health 
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a routerLink="resource-health">Resource Health</a>
+        <a routerLink="resource-health-b">Resource Health B</a>
+      </div>
+    </div>
   </nav>
 
   <router-outlet></router-outlet>
