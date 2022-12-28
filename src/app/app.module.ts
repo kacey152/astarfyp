@@ -37,12 +37,19 @@ import { PerformanceGraphComponent } from './components/performance-graph/perfor
     MatProgressBarModule,
     NgCircleProgressModule.forRoot({
       // Optional properties
-      radius: 100,
-      outerStrokeWidth: 16,
-      innerStrokeWidth: 8,
-      outerStrokeColor: "#78C000",
-      innerStrokeColor: "#C7E596",
-      animationDuration: 300
+      "radius": 100,
+      "space": -10,
+      "outerStrokeGradient": true,
+      "outerStrokeWidth": 10,
+      "outerStrokeColor": "#c24747",
+      "outerStrokeGradientStopColor": "#ffa552",
+      "innerStrokeColor": "#404244",
+      "innerStrokeWidth": 10,
+      "animateTitle": false,
+      "animationDuration": 300,
+      "showBackground": false,
+      "responsive": true,
+      "lazy": true
     }),
   ],
   providers: [],

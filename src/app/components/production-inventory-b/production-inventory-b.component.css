@@ -40,6 +40,9 @@
     width:25%;
 }
 
+circle-progress{
+    height: 40%;
+}
 
 table{
     margin: auto;

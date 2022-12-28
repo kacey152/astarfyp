@@ -30,24 +30,37 @@
         <h3 class="item3a">Overall Production Performance</h3>
         <div class="item3b">
             <circle-progress
-                [percent]="7"
-                [radius]="10"
-                [outerStrokeWidth]="1"
-                [innerStrokeWidth]="1"
-                [outerStrokeColor]="'#78C000'"
-                [innerStrokeColor]="'#C7E596'"
+                [percent]="90"
+                [showZeroOuterStroke]="true"
                 [animation]="true"
                 [animationDuration]="300"
                 [showUnits]="true"
                 [showBackground]="true"
                 [clockwise]="true"
                 [responsive]="true"
-                [startFromZero]="false"
-                [subtitleFontSize]="'1'"
-                [unitsFontSize]="'1'">
-                [titleFontSize]="'1'">
+                [startFromZero]="true"
+                [subtitleFontSize]="'15'"
+                [subtitle]="'Delayed Work Order'"
+                [unitsFontSize]="'15'"
+                [titleColor]="'#FDB900'"
+                [unitsColor]="'#FDB900'">
+            </circle-progress>
+            <circle-progress
+                [percent]="10"
+                [showZeroOuterStroke]="true"
+                [animation]="true"
+                [animationDuration]="300"
+                [showUnits]="true"
+                [showBackground]="true"
+                [clockwise]="true"
+                [responsive]="true"
+                [startFromZero]="true"
+                [subtitleFontSize]="'15'"
+                [subtitle]="'Overall Defect Rate'"
+                [unitsFontSize]="'15'"
+                [titleColor]="'#FDB900'"
+                [unitsColor]="'#FDB900'">
             </circle-progress>
         </div> 
-
     </div>
 </div>
