@@ -5,8 +5,8 @@ import { ProductionTrackingComponent } from './components/production-tracking/pr
 import { ResourceTrackingComponent } from './components/resource-tracking/resource-tracking.component';
 import { ProductionInventoryComponent } from './components/production-inventory/production-inventory.component';
 import { ProductionInventoryBComponent } from './components/production-inventory-b/production-inventory-b.component';
-import { ResourceHealthComponent } from './resource-health/resource-health.component';
-import { ResourceHealthBComponent } from './resource-health-b/resource-health-b.component';
+import { ResourceHealthComponent } from './components/resource-health/resource-health.component';
+import { ResourceHealthBComponent } from './components/resource-health-b/resource-health-b.component';
 
 const routes: Routes = [
   { path: 'production-tracking', component: ProductionTrackingComponent},

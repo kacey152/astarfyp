@@ -15,8 +15,8 @@ import { ProductionInventoryComponent } from './components/production-inventory/
 import { ProductionInventoryBComponent } from './components/production-inventory-b/production-inventory-b.component';
 import { ProgressBarComponent } from './components/progress-bar/progress-bar.component';
 import { PerformanceGraphComponent } from './components/performance-graph/performance-graph.component';
-import { ResourceHealthComponent } from './resource-health/resource-health.component';
-import { ResourceHealthBComponent } from './resource-health-b/resource-health-b.component';
+import { ResourceHealthComponent } from './components/resource-health/resource-health.component';
+import { ResourceHealthBComponent } from './components/resource-health-b/resource-health-b.component'; 
 
 
 @NgModule({

@@ -1,0 +1,22 @@
+.container{
+    width: auto;
+    height:100vh;
+    background-color: #14181b;
+    color: #b2e2dc;
+    display: grid;
+    grid-template-rows: 10% 70%;
+    row-gap: 2%;
+}
+
+.item1{
+    padding: 1%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid lightslategray;
+}
+
+.item2{
+    margin: 1%;
+    border: 1px solid white;
+}
