@@ -1,0 +1,10 @@
+.progress-circle{
+    margin-top: 20%;
+    margin-bottom: 20%;
+}
+
+.data{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}

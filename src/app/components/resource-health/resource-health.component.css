@@ -4,7 +4,7 @@
     background-color: #14181b;
     color: #b2e2dc;
     display: grid;
-    grid-template-rows: 10% 70%;
+    grid-template-rows: 10% 85%;
     row-gap: 2%;
 }
 
@@ -18,7 +18,12 @@
 
 .item2{
     margin: 1%;
-    border: 1px solid white;
     display: flex;
     justify-content: space-around;
+}
+
+app-resource-efficiency{
+    border: 1px solid white;
+    padding-left: 5%;
+    padding-right: 5%;
 }

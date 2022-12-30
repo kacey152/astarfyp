@@ -1,1 +1,22 @@
-<p>resource-efficiency works!</p>
+<h3>{{title}}</h3>
+<div class="progress-circle">
+    <circle-progress
+        [percent]="90"
+        [subtitle]="'Overall'"
+        [titleColor]="'#FDB900'"
+        [unitsColor]="'#FDB900'"
+        [outerStrokeGradient]="false">
+    </circle-progress>
+</div>
+<div class="data">
+    <div>
+        <p>SES</p>
+        <p>Make to Stock</p>
+        <p>Make to Order</p>
+    </div>
+    <div>
+        <p>{{SES}}%</p>
+        <p>{{MTS}}%</p>
+        <p>{{MTO}}%</p>
+    </div>
+</div>

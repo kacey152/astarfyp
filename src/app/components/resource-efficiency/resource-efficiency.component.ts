@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-resource-efficiency',
@@ -6,6 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./resource-efficiency.component.css']
 })
 export class ResourceEfficiencyComponent implements OnInit {
+  @Input() title: string;
+  SES: number = 3.23
+  MTS: number = 29
+  MTO: number = 30
 
   constructor() { }
 
