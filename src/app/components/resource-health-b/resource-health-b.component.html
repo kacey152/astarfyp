@@ -1,1 +1,128 @@
-<p>resource-health-b works!</p>
+<div class="container">
+    <h2 class="item1">ENTERPRISE - PRODUCTION AND INVENTORY</h2>
+    <div class="item2">
+        <h3>Machine OEE Performance</h3>
+        <table>
+            <tr>
+                <th class="col1"></th>
+                <th class="col2">Overall</th>
+                <th class="col3" colspan="4">Smart Engineering System (SES)</th>
+                <th class="col4" colspan="9">Make to Stock (MTS)</th>
+                <th class="col5" colspan="4">Make to Stock (MTS)</th>
+            </tr>
+            <tr>
+                <td>Machines</td>
+                <td></td>
+                <td>Milling</td>
+                <td>EDM</td>
+                <td>CMM</td>
+                <td>Robotic Arm</td>
+                <td>Injection Moulding</td>
+                <td>Infrared Oven 1</td>
+                <td>Infrared Oven 2</td>
+                <td>Screen Printer 1</td>
+                <td>Screen Printer 2</td>
+                <td>Membrane Assembly</td>
+                <td>Laser Welding</td>
+                <td>Laser Trimming</td>
+                <td>Cartridge Tester</td>
+                <td>Scent Filling</td>
+                <td>Holder Assembly</td>
+                <td>Holder Tester</td>
+                <td>Inkjet Printer</td>
+            </tr>
+            <tr>
+                <td>OEE</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>Availability</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>Performance</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>Quality</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+
+        </table>
+    </div>
+    <div class="item3">
+        <h3 class="item3a">Production Performance</h3>
+        <div class="item3b">
+            <div class="canvasHolder"><app-performance-graph [data]="energyData" chartType="bar"></app-performance-graph></div>
+            <div class="canvasHolder"><app-performance-graph [data]="wasteData" chartType="line"></app-performance-graph></div>
+        </div> 
+    </div>
+</div>

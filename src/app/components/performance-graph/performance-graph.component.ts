@@ -10,14 +10,16 @@ import Chart from 'chart.js/auto';
 })
 export class PerformanceGraphComponent implements OnInit {
   @Input() data: any;
+  @Input() chartType: any;
   
   chart: any;
-  chartType: any;
+  chartId: any;
+  
 
   constructor() { }
 
   ngOnInit(): void {
-    this.chartType = this.data.datasets[0].label;
+    this.chartId = this.data.datasets[0].label;
   }
 
   ngAfterViewInit(){
@@ -26,10 +28,10 @@ export class PerformanceGraphComponent implements OnInit {
 
   createChart(){
     
-    var canvas = document.getElementById(this.chartType) as HTMLCanvasElement;
+    var canvas = document.getElementById(this.chartId) as HTMLCanvasElement;
     var ctx = canvas.getContext('2d');
     this.chart = new Chart(ctx, {
-      type: 'bar', //this denotes the type of chart
+      type: this.chartType, //this denotes the type of chart
 
       data: this.data,
       options: {
