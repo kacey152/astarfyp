@@ -17,7 +17,9 @@ import { ProgressBarComponent } from './components/progress-bar/progress-bar.com
 import { PerformanceGraphComponent } from './components/performance-graph/performance-graph.component';
 import { ResourceHealthComponent } from './components/resource-health/resource-health.component';
 import { ResourceHealthBComponent } from './components/resource-health-b/resource-health-b.component';
-import { ResourceEfficiencyComponent } from './components/resource-efficiency/resource-efficiency.component'; 
+import { ResourceEfficiencyComponent } from './components/resource-efficiency/resource-efficiency.component';
+import { ManagementKpiComponent } from './components/management-kpi/management-kpi.component';
+import { ManagementKpiBComponent } from './components/management-kpi-b/management-kpi-b.component'; 
 
 
 @NgModule({
@@ -36,6 +38,8 @@ import { ResourceEfficiencyComponent } from './components/resource-efficiency/re
     ResourceHealthComponent,
     ResourceHealthBComponent,
     ResourceEfficiencyComponent,
+    ManagementKpiComponent,
+    ManagementKpiBComponent,
   ],
   imports: [
     BrowserModule,

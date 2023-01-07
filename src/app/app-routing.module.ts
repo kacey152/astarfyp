@@ -7,6 +7,8 @@ import { ProductionInventoryComponent } from './components/production-inventory/
 import { ProductionInventoryBComponent } from './components/production-inventory-b/production-inventory-b.component';
 import { ResourceHealthComponent } from './components/resource-health/resource-health.component';
 import { ResourceHealthBComponent } from './components/resource-health-b/resource-health-b.component';
+import { ManagementKpiComponent } from './components/management-kpi/management-kpi.component';
+import { ManagementKpiBComponent } from './components/management-kpi-b/management-kpi-b.component';
 
 const routes: Routes = [
   { path: 'production-tracking', component: ProductionTrackingComponent},
@@ -16,6 +18,8 @@ const routes: Routes = [
   { path: 'production-inventory-b', component: ProductionInventoryBComponent },
   { path: 'resource-health', component: ResourceHealthComponent },
   { path: 'resource-health-b', component: ResourceHealthBComponent },
+  { path: 'management-kpi', component: ManagementKpiComponent },
+  { path: 'management-kpi-b', component: ManagementKpiBComponent },
 ];
 
 @NgModule({
