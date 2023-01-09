@@ -21,12 +21,57 @@
         </div>
         <div class="item2b">
             <h3>Inventory</h3>
+            <p class="main">{{inventory.value}} <span class="units">(SGD)</span></p>
+            <div class="inline">
+                <div>
+                    <h4>Projection</h4>  
+                    <p>
+                        <span [ngClass]="inventory.projection > inventory.target ? 'green' : 'red'">
+                            {{inventory.value}} K
+                        </span>
+                    </p>
+                </div>
+                <div>
+                    <h4>Target</h4>  
+                    <p>{{inventory.target}} K</p>
+                </div>
+            </div>
         </div>
         <div class="item2c">
             <h3>Cost</h3>
+            <p class="main">{{cost.value}} <span class="units">(SGD)</span></p>
+            <div class="inline">
+                <div>
+                    <h4>Projection</h4>  
+                    <p>
+                        <span [ngClass]="cost.projection > cost.target ? 'green' : 'red'">
+                            {{cost.value}} K
+                        </span>
+                    </p>
+                </div>
+                <div>
+                    <h4>Target</h4>  
+                    <p>{{cost.target}} K</p>
+                </div>
+            </div>
         </div>
         <div class="item2d">
             <h3>Production Volume</h3>
+            <p class="main">{{productionVolume.value}} <span class="units">(UNITS)</span></p>
+            <div class="inline">
+                <div>
+                    <h4>Projection</h4>  
+                    <p>
+                        <span [ngClass]="productionVolume.projection > productionVolume.target ? 'green' : 'red'">
+                            {{productionVolume.value}} K
+                        </span>
+                    </p>
+                </div>
+                <div>
+                    <h4>Target</h4>  
+                    <p>{{productionVolume.target}} K</p>
+                </div>
+            </div>
         </div>
     </div>
 </div>

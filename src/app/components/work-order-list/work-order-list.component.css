@@ -7,3 +7,6 @@
     font-size: 1.5vh;
 }
 
+.item1, .item2, .item3, .item4 {
+    padding-left: 2%;
+}

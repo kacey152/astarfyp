@@ -12,9 +12,21 @@ export class ManagementKpiComponent implements OnInit {
     projection: 105.2,
     target: 95.7
   }  
-  inventory: any = 100;  
-  cost: any = 100;  
-  productionVolume: any = 100;  
+  inventory={
+    value: 353629,
+    projection: 394.75,
+    target: 405.83
+  }    
+  cost={
+    value: 27950,
+    projection: 61.3,
+    target: 53.1
+  }    
+  productionVolume={
+    value: 4965,
+    projection: 4.372,
+    target: 9.838
+  }    
   constructor() { }
 
   ngOnInit(): void {

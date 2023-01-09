@@ -55,6 +55,7 @@ h3{
 .green{
     color: green;
     text-shadow: 0 0 20px 10px green;
+    /* fix glow effect */
 }
 .red{
     color: red;
