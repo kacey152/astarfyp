@@ -1,1 +1,77 @@
-<p>management-kpi-b works!</p>
+<div class="container">
+    <h2 class="item1">MANAGEMENT KPI</h2>
+    <div class="item2">
+        <div class="item2a">
+            <h3>Total Productivity</h3>
+            <p class="main">{{productivity.value}} <span class="units">($/$)</span></p>
+            <div class="inline">
+                <div>
+                    <h4>Projection</h4>  
+                    <p>
+                        <span [ngClass]="productivity.projection >= productivity.target ? 'green' : 'red'">
+                            {{productivity.value}}
+                        </span>
+                    </p>
+                </div>
+                <div>
+                    <h4>Target</h4>  
+                    <p>{{productivity.target}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="item2b">
+            <h3>On-time Delivery</h3>
+            <p class="main">{{onTimeDelivery.value}} <span class="units">(%)</span></p>
+            <div class="inline">
+                <div>
+                    <h4>Projection</h4>  
+                    <p>
+                        <span [ngClass]="onTimeDelivery.projection >= onTimeDelivery.target ? 'green' : 'red'">
+                            {{onTimeDelivery.value}}
+                        </span>
+                    </p>
+                </div>
+                <div>
+                    <h4>Target</h4>  
+                    <p>{{onTimeDelivery.target}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="item2c">
+            <h3>Capacity Utilization</h3>
+            <p class="main">{{capacityUtilization.value}} <span class="units">(%)</span></p>
+            <div class="inline">
+                <div>
+                    <h4>Projection</h4>  
+                    <p>
+                        <span [ngClass]="capacityUtilization.projection >= capacityUtilization.target ? 'green' : 'red'">
+                            {{capacityUtilization.value}}
+                        </span>
+                    </p>
+                </div>
+                <div>
+                    <h4>Target</h4>  
+                    <p>{{capacityUtilization.target}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="item2d">
+            <h3>Safety</h3>
+            <p class="main">{{safety.value}} <span class="units">(INCIDENTS/MIL HOURS)</span></p>
+            <div class="inline">
+                <div>
+                    <h4>Projection</h4>  
+                    <p>
+                        <span [ngClass]="safety.projection >= safety.target ? 'green' : 'red'">
+                            {{safety.value}}
+                        </span>
+                    </p>
+                </div>
+                <div>
+                    <h4>Target</h4>  
+                    <p>{{safety.target}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
