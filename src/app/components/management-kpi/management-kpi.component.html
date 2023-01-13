@@ -9,13 +9,13 @@
                     <h4>Projection</h4>  
                     <p>
                         <span [ngClass]="profit.projection >= profit.target ? 'green' : 'red'">
-                            {{profit.value}} K
+                            {{profit.projection}} K
                         </span>
                     </p>
                 </div>
                 <div>
                     <h4>Target</h4>  
-                    <p>{{profit.target}} K</p>
+                    <p>{{profit.projection}} K</p>
                 </div>
             </div>
         </div>
@@ -27,7 +27,7 @@
                     <h4>Projection</h4>  
                     <p>
                         <span [ngClass]="inventory.projection >= inventory.target ? 'green' : 'red'">
-                            {{inventory.value}} K
+                            {{inventory.projection}} K
                         </span>
                     </p>
                 </div>
@@ -45,7 +45,7 @@
                     <h4>Projection</h4>  
                     <p>
                         <span [ngClass]="cost.projection >= cost.target ? 'green' : 'red'">
-                            {{cost.value}} K
+                            {{cost.projection}} K
                         </span>
                     </p>
                 </div>
@@ -63,7 +63,7 @@
                     <h4>Projection</h4>  
                     <p>
                         <span [ngClass]="productionVolume.projection >= productionVolume.target ? 'green' : 'red'">
-                            {{productionVolume.value}} K
+                            {{productionVolume.projection}} K
                         </span>
                     </p>
                 </div>

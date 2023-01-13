@@ -9,7 +9,7 @@
                     <h4>Projection</h4>  
                     <p>
                         <span [ngClass]="productivity.projection >= productivity.target ? 'green' : 'red'">
-                            {{productivity.value}}
+                            {{productivity.projection}}
                         </span>
                     </p>
                 </div>
@@ -27,7 +27,7 @@
                     <h4>Projection</h4>  
                     <p>
                         <span [ngClass]="onTimeDelivery.projection >= onTimeDelivery.target ? 'green' : 'red'">
-                            {{onTimeDelivery.value}}
+                            {{onTimeDelivery.projection}}
                         </span>
                     </p>
                 </div>
@@ -45,7 +45,7 @@
                     <h4>Projection</h4>  
                     <p>
                         <span [ngClass]="capacityUtilization.projection >= capacityUtilization.target ? 'green' : 'red'">
-                            {{capacityUtilization.value}}
+                            {{capacityUtilization.projection}}
                         </span>
                     </p>
                 </div>
@@ -63,7 +63,7 @@
                     <h4>Projection</h4>  
                     <p>
                         <span [ngClass]="safety.projection >= safety.target ? 'green' : 'red'">
-                            {{safety.value}}
+                            {{safety.projection}}
                         </span>
                     </p>
                 </div>
