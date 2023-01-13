@@ -35,9 +35,13 @@ export class PerformanceGraphComponent implements OnInit {
 
       data: this.data,
       options: {
-        aspectRatio: 2.5
-      }
-      
+        aspectRatio: 2.5,
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }      
     });
   }
 

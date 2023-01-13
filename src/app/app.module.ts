@@ -19,7 +19,9 @@ import { ResourceHealthComponent } from './components/resource-health/resource-h
 import { ResourceHealthBComponent } from './components/resource-health-b/resource-health-b.component';
 import { ResourceEfficiencyComponent } from './components/resource-efficiency/resource-efficiency.component';
 import { ManagementKpiComponent } from './components/management-kpi/management-kpi.component';
-import { ManagementKpiBComponent } from './components/management-kpi-b/management-kpi-b.component'; 
+import { ManagementKpiBComponent } from './components/management-kpi-b/management-kpi-b.component';
+import { CustomerSatisfactionComponent } from './components/customer-satisfaction/customer-satisfaction.component';
+import { CustomerSatisfactionBComponent } from './components/customer-satisfaction-b/customer-satisfaction-b.component';
 
 
 @NgModule({
@@ -40,6 +42,8 @@ import { ManagementKpiBComponent } from './components/management-kpi-b/managemen
     ResourceEfficiencyComponent,
     ManagementKpiComponent,
     ManagementKpiBComponent,
+    CustomerSatisfactionComponent,
+    CustomerSatisfactionBComponent,
   ],
   imports: [
     BrowserModule,
