@@ -2,8 +2,30 @@
     <h2 class="item1">SUPPLY CHAIN - CUSTOMER SATISFACTION</h2>
     <div class="item2">
         <div class="item2a">
-            <div class="canvasHolder"><app-performance-graph [data]="keyAccountsData" chartType="line"></app-performance-graph></div>
-
+            <div class="section">
+                <app-performance-graph [data]="keyAccountsData" chartType="line"></app-performance-graph>
+                <div class="description">
+                    <p>KEY ACCOUNTS</p>
+                    <p>3.57</p>
+                    <p>(out of 5)</p>
+                </div>
+            </div>
+            <div class="section">
+                <app-performance-graph [data]="directSalesData" chartType="line"></app-performance-graph>
+                <div class="description">
+                    <p>KEY ACCOUNTS</p>
+                    <p>3.57</p>
+                    <p>(out of 5)</p>
+                </div>
+            </div>
+            <div class="section">
+                <app-performance-graph [data]="indirectSalesData" chartType="line"></app-performance-graph>
+                <div class="description">
+                    <p>KEY ACCOUNTS</p>
+                    <p>3.57</p>
+                    <p>(out of 5)</p>
+                </div>
+            </div>
         </div>
         <div class="item2b">
         </div>
