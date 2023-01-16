@@ -34,6 +34,11 @@
             </div>
         </div>
         <div class="item2b">
+                <p>OVERALL</p>
+                <p class="large"
+                    [ngClass]="avgRating.overall >= 4 ? 'green' : avgRating.overall >=3 ? 'yellow': 'red'">
+                    {{avgRating.overall}}</p>
+                <p>(Target 4.00)</p>
         </div>
     </div>
 </div>

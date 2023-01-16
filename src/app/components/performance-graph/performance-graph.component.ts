@@ -11,6 +11,7 @@ import Chart from 'chart.js/auto';
 export class PerformanceGraphComponent implements OnInit {
   @Input() data: any;
   @Input() chartType: any;
+  @Input() scales: any;
   
   chart: any;
   chartId: any;
@@ -20,6 +21,13 @@ export class PerformanceGraphComponent implements OnInit {
 
   ngOnInit(): void {
     this.chartId = this.data.datasets[0].label;
+    if(!this.scales) {
+      this.scales = {
+        y: {
+            beginAtZero: true
+        }
+      };
+    }
   }
 
   ngAfterViewInit(){
@@ -32,17 +40,13 @@ export class PerformanceGraphComponent implements OnInit {
     var ctx = canvas.getContext('2d');
     this.chart = new Chart(ctx, {
       type: this.chartType, //this denotes the type of chart
-
       data: this.data,
       options: {
         aspectRatio: 2.5,
-        scales: {
-            y: {
-                beginAtZero: true
-            }
-        }
+        scales: this.scales
     }      
     });
   }
 
 }
+

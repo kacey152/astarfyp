@@ -79,6 +79,7 @@ export class CustomerSatisfactionComponent implements OnInit {
     keyAccounts: 0,
     indirect: 0,
     direct: 0,
+    overall: 0,
   }
 
   average(dataGroup){
@@ -92,5 +93,7 @@ export class CustomerSatisfactionComponent implements OnInit {
     this.avgRating.keyAccounts = this.average(this.keyAccountsData)
     this.avgRating.indirect = this.average(this.indirectSalesData)
     this.avgRating.direct = this.average(this.directSalesData)
+    this.avgRating.overall = Math.floor(((this.avgRating.keyAccounts + this.avgRating.indirect + this.avgRating.direct)/3) * 100) / 100;
+
   }
 }
