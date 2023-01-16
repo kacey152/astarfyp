@@ -22,3 +22,26 @@
     display: grid;
     grid-template-columns: 50% 50%;
 }
+
+.item2a{
+    display: grid;
+    grid-template-columns: 45% 15% 30%;
+    grid-column-gap: 4%;
+    border: 1px solid white;
+}
+
+app-performance-graph, .center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.large{
+    font-size: 150%;
+    font-weight: bold;
+    
+}
+
+.gap-less p{
+    margin: 10%;
+}

@@ -2,7 +2,29 @@
     <h2 class="item1">SUPPLY CHAIN - CUSTOMER SATISFACTION</h2>
     <div class="item2">
         <div class="item2a">
-            <app-performance-graph [data]="rating" chartType="doughnut" scales="{yAxes: []}"></app-performance-graph>
+            <app-performance-graph class="special" [data]="rating" chartType="doughnut" scales="{yAxes: []}"></app-performance-graph>
+            <div class="center gap-less">
+                <p>Positive</p>
+                <p class="large">69%</p>
+                <p>Neutral</p>
+                <p class="large">20%</p>
+                <p>Negative</p>
+                <p class="large">11%</p>
+            </div>
+            <table>
+                <tr>
+                    <td>ON TIME, IN FULL</td>
+                    <td class="large">99%</td>
+                </tr>
+                <tr>
+                    <td>RESCHEDULED ORDERS/TOTAL</td>
+                    <td class="large">0%</td>
+                </tr>
+                <tr>
+                    <td>COMPLAINTS/TOTAL</td>
+                    <td class="large">0%</td>
+                </tr>
+            </table>
         </div>
         <div class="item2b">
 
