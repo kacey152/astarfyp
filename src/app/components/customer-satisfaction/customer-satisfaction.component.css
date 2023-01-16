@@ -4,7 +4,7 @@
     background-color: #14181b;
     color: #b2e2dc;
     display: grid;
-    grid-template-rows: 10% 86%;
+    grid-template-rows: 10% 88%;
     row-gap: 2%;
 }
 
@@ -38,5 +38,23 @@
 .description{
     display: grid;
     align-content: center; /* centers the element vertically */
- 
+}
+
+.large{
+    font-size: 300%;
+    font-weight: bold;
+}
+
+p {
+    margin: 2%;
+  }
+
+.green{
+    color: green;
+}
+.yellow{
+    color: yellow;
+}
+.red{
+    color: red;
 }

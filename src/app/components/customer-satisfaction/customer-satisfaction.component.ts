@@ -20,7 +20,7 @@ export class CustomerSatisfactionComponent implements OnInit {
     datasets: [
       {
         label: 'Key Accounts', //chartId
-        data: ['2', '2', '3', '3', '5', '5', '5'],
+        data: [2, 2, 3, 3, 5, 5, 5],
         backgroundColor: 'rgba(0, 255, 255, 0.2)',
         borderColor: 'cyan',
         borderWidth: '1',
@@ -43,7 +43,7 @@ export class CustomerSatisfactionComponent implements OnInit {
     datasets: [
       {
         label: 'Direct Sales', //chartId
-        data: ['2', '2', '5', '5', '5', '5', '5'],
+        data: [2, 2, 5, 5, 5, 5, 5],
         backgroundColor: 'rgba(0, 255, 255, 0.2)',
         borderColor: 'cyan',
         borderWidth: '1',
@@ -66,7 +66,7 @@ export class CustomerSatisfactionComponent implements OnInit {
     datasets: [
       {
         label: 'Indirect Sales', //chartId
-        data: ['3', '5', '5', '5', '5', '4', '4'],
+        data: [3, 5, 5, 5, 5, 4, 4],
         backgroundColor: 'rgba(0, 255, 255, 0.2)',
         borderColor: 'cyan',
         borderWidth: '1',
@@ -75,9 +75,22 @@ export class CustomerSatisfactionComponent implements OnInit {
     ],
   };
 
+  avgRating = {
+    keyAccounts: 0,
+    indirect: 0,
+    direct: 0,
+  }
 
-
+  average(dataGroup){
+    let sum = dataGroup.datasets[0].data.reduce((a: number,b: number)=> a + b, 0)
+    console.log(sum)
+    return Math.floor((sum/dataGroup.datasets[0].data.length) * 100) / 100;
+  }
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.avgRating.keyAccounts = this.average(this.keyAccountsData)
+    this.avgRating.indirect = this.average(this.indirectSalesData)
+    this.avgRating.direct = this.average(this.directSalesData)
+  }
 }

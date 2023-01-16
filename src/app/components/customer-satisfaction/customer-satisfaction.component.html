@@ -6,23 +6,29 @@
                 <app-performance-graph [data]="keyAccountsData" chartType="line"></app-performance-graph>
                 <div class="description">
                     <p>KEY ACCOUNTS</p>
-                    <p>3.57</p>
+                    <p class="large"
+                        [ngClass]="avgRating.keyAccounts >= 4 ? 'green' : avgRating.keyAccounts >=3 ? 'yellow': 'red'">
+                        {{avgRating.keyAccounts}}</p>
                     <p>(out of 5)</p>
                 </div>
             </div>
             <div class="section">
                 <app-performance-graph [data]="directSalesData" chartType="line"></app-performance-graph>
                 <div class="description">
-                    <p>KEY ACCOUNTS</p>
-                    <p>3.57</p>
+                    <p>DIRECT SALES</p>
+                    <p class="large"
+                        [ngClass]="avgRating.direct >= 4 ? 'green' : avgRating.direct >=3 ? 'yellow': 'red'">
+                        {{avgRating.direct}}</p>
                     <p>(out of 5)</p>
                 </div>
             </div>
             <div class="section">
                 <app-performance-graph [data]="indirectSalesData" chartType="line"></app-performance-graph>
                 <div class="description">
-                    <p>KEY ACCOUNTS</p>
-                    <p>3.57</p>
+                    <p>INDIRECT SALES</p>
+                    <p class="large"
+                        [ngClass]="avgRating.indirect >= 4 ? 'green' : avgRating.indirect >=3 ? 'yellow': 'red'">
+                        {{avgRating.indirect}}</p>
                     <p>(out of 5)</p>
                 </div>
             </div>
