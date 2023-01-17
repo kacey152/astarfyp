@@ -26,6 +26,51 @@ export class CustomerSatisfactionBComponent implements OnInit {
  
     ],
   };
+
+  revenueData = {
+    // values on X-Axis
+    labels: [
+      'Date 1',
+      'Date 2',
+      'Date 3',
+      'Date 4',
+      'Date 5',
+      'Date 6',
+      'Date 7',
+    ],
+    datasets: [
+      {
+        label: 'Revenue', //chartId
+        data: [600, 700, 900, 1000, 1200, 1600, 1380],
+        backgroundColor: 'rgb(128,188,244)',
+        borderWidth: '1',
+        fill: true,
+      },
+    ],
+  };
+
+  productSatisfaction = {
+    // values on X-Axis
+    labels: [
+      'Date 1',
+      'Date 2',
+      'Date 3',
+      'Date 4',
+      'Date 5',
+      'Date 6',
+      'Date 7',
+    ],
+    datasets: [
+      {
+        label: 'Product Satisfaction', //chartId
+        data: [35, 39, 50, 55, 60, 80, 70],
+        backgroundColor: 'rgb(128,188,244)',
+        borderWidth: '1',
+        fill: true,
+      },
+    ],
+  };
+
   constructor() { }
 
   ngOnInit(): void {

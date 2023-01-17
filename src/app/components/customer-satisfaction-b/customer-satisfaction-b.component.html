@@ -2,7 +2,7 @@
     <h2 class="item1">SUPPLY CHAIN - CUSTOMER SATISFACTION</h2>
     <div class="item2">
         <div class="item2a">
-            <app-performance-graph class="special" [data]="rating" chartType="doughnut" scales="{yAxes: []}"></app-performance-graph>
+            <app-performance-graph class="doughnut" [data]="rating" chartType="doughnut" scales="{yAxes: []}"></app-performance-graph>
             <div class="center gap-less">
                 <p>Positive</p>
                 <p class="large">69%</p>
@@ -27,7 +27,12 @@
             </table>
         </div>
         <div class="item2b">
-
+            <div></div>
+            <app-performance-graph class="revenue" [data]="revenueData" chartType="bar"></app-performance-graph>
         </div>
+    </div>
+    <div class="item3">
+        <h3>Product Satisfaction</h3>
+        <div class="productSatisfaction"><app-performance-graph  [data]="productSatisfaction" chartType="bar"></app-performance-graph></div>
     </div>
 </div>

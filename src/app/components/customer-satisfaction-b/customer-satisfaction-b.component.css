@@ -1,15 +1,15 @@
 .container{
     width: auto;
-    height:100vh;
+    height: 100vh;
     background-color: #14181b;
     color: #b2e2dc;
     display: grid;
-    grid-template-rows: 10% 44% 44%;
+    grid-template-rows: 10% 42% 42%;
     row-gap: 2%;
 }
 
 .item1{
-    padding: 1%;
+    padding: 1%;    
     margin: 0;
     display: flex;
     align-items: center;
@@ -20,7 +20,7 @@
     margin: 1%;
     border: 1px solid white;
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 48vw 48vw;
 }
 
 .item2a{
@@ -30,7 +30,10 @@
     border: 1px solid white;
 }
 
-app-performance-graph, .center{
+.item3 h3{
+    margin-left: 2%;
+}
+.doughnut, .center{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -44,4 +47,19 @@ app-performance-graph, .center{
 
 .gap-less p{
     margin: 10%;
+}
+
+.item2b{
+    display: grid;
+    grid-template-columns: 2% 98%;
+}
+.revenue{
+    margin-top: 1%;
+}
+
+.productSatisfaction{
+    height: 80%;
+    margin-left: 2%;
+    margin-top: 0;
+    margin-bottom: 0;
 }
