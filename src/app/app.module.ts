@@ -22,6 +22,8 @@ import { ManagementKpiComponent } from './components/management-kpi/management-k
 import { ManagementKpiBComponent } from './components/management-kpi-b/management-kpi-b.component';
 import { CustomerSatisfactionComponent } from './components/customer-satisfaction/customer-satisfaction.component';
 import { CustomerSatisfactionBComponent } from './components/customer-satisfaction-b/customer-satisfaction-b.component';
+import { LogisticsTrackingComponent } from './components/logistics-tracking/logistics-tracking.component';
+import { LogisticsTrackingBComponent } from './components/logistics-tracking-b/logistics-tracking-b.component';
 
 
 @NgModule({
@@ -44,6 +46,8 @@ import { CustomerSatisfactionBComponent } from './components/customer-satisfacti
     ManagementKpiBComponent,
     CustomerSatisfactionComponent,
     CustomerSatisfactionBComponent,
+    LogisticsTrackingComponent,
+    LogisticsTrackingBComponent,
   ],
   imports: [
     BrowserModule,

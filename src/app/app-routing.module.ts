@@ -11,6 +11,8 @@ import { ManagementKpiComponent } from './components/management-kpi/management-k
 import { ManagementKpiBComponent } from './components/management-kpi-b/management-kpi-b.component';
 import { CustomerSatisfactionComponent } from './components/customer-satisfaction/customer-satisfaction.component';
 import { CustomerSatisfactionBComponent } from './components/customer-satisfaction-b/customer-satisfaction-b.component';
+import { LogisticsTrackingComponent } from './components/logistics-tracking/logistics-tracking.component';
+import { LogisticsTrackingBComponent } from './components/logistics-tracking-b/logistics-tracking-b.component';
 
 const routes: Routes = [
   { path: 'production-tracking', component: ProductionTrackingComponent},
@@ -24,6 +26,8 @@ const routes: Routes = [
   { path: 'management-kpi-b', component: ManagementKpiBComponent },
   { path: 'customer-satisfaction', component: CustomerSatisfactionComponent },
   { path: 'customer-satisfaction-b', component: CustomerSatisfactionBComponent },
+  { path: 'logistics-tracking', component: LogisticsTrackingComponent },
+  { path: 'logistics-tracking-b', component: LogisticsTrackingBComponent },
 ];
 
 @NgModule({
