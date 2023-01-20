@@ -6,6 +6,11 @@
         </div>
         <div class="item2b">
             <h4>DELIVERY PROGRESS</h4>
+            <ul>
+                <li *ngFor="let delivery of deliveries">
+                    <app-delivery-progress [delivery]="delivery"></app-delivery-progress>
+                </li>
+            </ul>
         </div>
     </div>
     <h3>ORDER STATUS SUMMARY</h3>

@@ -24,6 +24,7 @@ import { CustomerSatisfactionComponent } from './components/customer-satisfactio
 import { CustomerSatisfactionBComponent } from './components/customer-satisfaction-b/customer-satisfaction-b.component';
 import { LogisticsTrackingComponent } from './components/logistics-tracking/logistics-tracking.component';
 import { LogisticsTrackingBComponent } from './components/logistics-tracking-b/logistics-tracking-b.component';
+import { DeliveryProgressComponent } from './components/delivery-progress/delivery-progress.component';
 
 
 @NgModule({
@@ -48,6 +49,7 @@ import { LogisticsTrackingBComponent } from './components/logistics-tracking-b/l
     CustomerSatisfactionBComponent,
     LogisticsTrackingComponent,
     LogisticsTrackingBComponent,
+    DeliveryProgressComponent,
   ],
   imports: [
     BrowserModule,
