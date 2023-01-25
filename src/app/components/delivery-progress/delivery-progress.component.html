@@ -1,1 +1,11 @@
-<p>{{delivery.rider}}</p>
+<div class="container">
+    <p>{{delivery.rider}}</p>
+    <div class="subcontainer">
+        <div class="deliveryBar" [ngStyle]="{'width': percentage + '%'}">
+            {{delivery.current}}/{{delivery.total}} PENDING
+        </div>
+        <div>
+            Pickup from <span class="pickup">{{delivery.pickup}}</span>
+        </div>
+    </div>
+</div>

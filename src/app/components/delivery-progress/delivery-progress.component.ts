@@ -7,9 +7,11 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class DeliveryProgressComponent implements OnInit {
   @Input() delivery;
+  percentage: number
   constructor() { }
 
   ngOnInit(): void {
+    this.percentage = this.delivery.current/this.delivery.total *100
   }
 
 }
