@@ -16,9 +16,40 @@
     <h3>ORDER STATUS SUMMARY</h3>
     <div class="item3">
         <div class="item3a">
-            
+            <app-performance-graph [data]="orderStatusData" chartType="bar" scales="{
+                xAxes: [{
+                        ticks: {
+                         fontSize: 10px
+                        }
+                       }]
+                     }
+                  }"></app-performance-graph>
         </div>
         <div class="item3b">
+            <h4>INDIVIDUAL ORDER STATUS</h4>
+            <table>
+                <colgroup>
+                    <col class="bigCol">
+                    <col class="smallCol">
+                    <col class="bigCol">
+                    <col class="smallCol">
+                    <col class="bigCol">
+                </colgroup>
+                <tr class="header">
+                    <th>Order No.</th>
+                    <th>Customer</th>
+                    <th>Account Type</th>
+                    <th>Status</th>
+                    <th>Planned <br> (Actual) Completion</th>
+                </tr>
+                <tr *ngFor="let order of orders">
+                    <td>{{order.orderNo}}</td>
+                    <td>{{order.customer}}</td>
+                    <td>{{order.accountType}}</td>
+                    <td>{{order.status}}</td>
+                    <td>{{order.planned}} <br> ({{order.actual}})</td>
+                </tr>
+            </table>
         </div>
     </div>
 </div>

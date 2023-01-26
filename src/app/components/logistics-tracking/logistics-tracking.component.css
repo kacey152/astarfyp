@@ -6,6 +6,7 @@
     display: grid;
     grid-template-rows: 10% 38% 8% 38%;
     row-gap: 1%;
+    overflow: hidden;
 }
 
 .item1{
@@ -24,13 +25,60 @@
     justify-content: center;
 }
 
-.item2a, .item2b, .item3a, .item3b{
+.item3a{
+    padding-top: 1%;
+    padding-left: 1%;
+}
+
+
+.item2a, .item2b, .item3b{
     border: 1px solid white;
 }
+
+.item3b{
+    max-height: 80%;
+}
+
 h3, h4{
-    margin-left: 1%;
+    margin-left: 2%;
     width: 98%;
 }
 h3{
     border-bottom: 1px solid lightslategray;
+}
+
+table{
+    margin:auto;
+    max-height: 80%;
+    width: 95%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    display: block;
+    table-layout: fixed;
+}
+
+table, th, td {
+    border: 1px solid grey;
+    border-spacing: 0;
+}
+
+.header th{
+    color: lightgrey;
+    position: sticky;
+    top: 0;
+    background-color: #14181b;
+}
+th, td {
+    text-align: center;
+    overflow: hidden;
+      
+}
+table tr{
+    height: 5vh;
+}
+.bigCol{
+    width: 17%;
+}
+.smallCol{
+    width: 14%;
 }
