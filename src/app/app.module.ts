@@ -25,7 +25,7 @@ import { CustomerSatisfactionBComponent } from './components/customer-satisfacti
 import { LogisticsTrackingComponent } from './components/logistics-tracking/logistics-tracking.component';
 import { LogisticsTrackingBComponent } from './components/logistics-tracking-b/logistics-tracking-b.component';
 import { DeliveryProgressComponent } from './components/delivery-progress/delivery-progress.component';
-
+import { ManagementKpiCComponent } from './components/management-kpi-c/management-kpi-c.component';
 
 @NgModule({
   declarations: [
@@ -50,6 +50,7 @@ import { DeliveryProgressComponent } from './components/delivery-progress/delive
     LogisticsTrackingComponent,
     LogisticsTrackingBComponent,
     DeliveryProgressComponent,
+    ManagementKpiCComponent,
   ],
   imports: [
     BrowserModule,

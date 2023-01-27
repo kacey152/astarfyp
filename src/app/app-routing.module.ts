@@ -9,6 +9,7 @@ import { ResourceHealthComponent } from './components/resource-health/resource-h
 import { ResourceHealthBComponent } from './components/resource-health-b/resource-health-b.component';
 import { ManagementKpiComponent } from './components/management-kpi/management-kpi.component';
 import { ManagementKpiBComponent } from './components/management-kpi-b/management-kpi-b.component';
+import { ManagementKpiCComponent } from './components/management-kpi-c/management-kpi-c.component';
 import { CustomerSatisfactionComponent } from './components/customer-satisfaction/customer-satisfaction.component';
 import { CustomerSatisfactionBComponent } from './components/customer-satisfaction-b/customer-satisfaction-b.component';
 import { LogisticsTrackingComponent } from './components/logistics-tracking/logistics-tracking.component';
@@ -24,6 +25,7 @@ const routes: Routes = [
   { path: 'resource-health-b', component: ResourceHealthBComponent },
   { path: 'management-kpi', component: ManagementKpiComponent },
   { path: 'management-kpi-b', component: ManagementKpiBComponent },
+  { path: 'management-kpi-c', component: ManagementKpiCComponent },
   { path: 'customer-satisfaction', component: CustomerSatisfactionComponent },
   { path: 'customer-satisfaction-b', component: CustomerSatisfactionBComponent },
   { path: 'logistics-tracking', component: LogisticsTrackingComponent },
