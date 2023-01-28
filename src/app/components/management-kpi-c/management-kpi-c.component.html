@@ -1,14 +1,14 @@
 <div class="container">
     <h2 class="item1">MANAGEMENT KPI</h2>
     <nav class="item2">
-        <button>Financials</button>
-        <button>Inventory</button>
-        <button>Operations</button>
-        <button>Productivity</button>
-        <button>Customer Satisfaction</button>
-        <button>Safety</button>
+        <button (click)="changeCategory(financials)">Financials</button>
+        <!-- <button (click)="changeCategory(inventory)">Inventory</button>
+        <button (click)="changeCategory(operations)">Operations</button>
+        <button (click)="changeCategory(productivity)">Productivity</button>
+        <button (click)="changeCategory(customer)">Customer Satisfaction</button>
+        <button (click)="changeCategory(safety)">Safety</button> -->
     </nav>
     <div class="item3">
-        <app-performance-graph [data]="category" chartType="doughnut"></app-performance-graph>
+        <app-performance-graph *ngIf="categorySelected" [data]="categorySelected" chartType="doughnut"></app-performance-graph>
     </div>
 </div>
