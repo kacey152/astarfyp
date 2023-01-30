@@ -10,8 +10,14 @@
   </nav>
   <div class="item3">
     <app-performance-graph
-      *ngIf="categorySelectedData != null"
-      [data]="categorySelectedData"
+      *ngIf="categorySelectedCurrentData"
+      [data]="categorySelectedCurrentData"
+      chartType="doughnut"
+      scales="{yAxes: []}"
+    ></app-performance-graph>
+    <app-performance-graph
+      *ngIf="categorySelectedProjectedData"
+      [data]="categorySelectedProjectedData"
       chartType="doughnut"
       scales="{yAxes: []}"
     ></app-performance-graph>

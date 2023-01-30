@@ -16,5 +16,8 @@
     align-items: center;
     border-bottom: 1px solid lightslategray;
 }
-
+.item3{
+    display: grid;
+    grid-template-columns: 48% 48%;
+}
 
