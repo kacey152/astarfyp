@@ -12,6 +12,7 @@ export class PerformanceGraphComponent implements OnInit {
   @Input() data: any;
   @Input() chartType: any;
   @Input() scales: any;
+  @Input() plugins: any;
   
   chart: any;
   chartId: any;
@@ -35,7 +36,7 @@ export class PerformanceGraphComponent implements OnInit {
   }
 
   createChart(){
-    
+
     var canvas = document.getElementById(this.chartId) as HTMLCanvasElement;
     var ctx = canvas.getContext('2d');
     this.chart = new Chart(ctx, {

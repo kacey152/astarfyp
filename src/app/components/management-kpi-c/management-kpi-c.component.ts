@@ -7,6 +7,8 @@ import { Component, EventEmitter, OnInit,Output,OnChanges } from '@angular/core'
 })
 export class ManagementKpiCComponent implements OnInit {
   @Output() categorySelected = new EventEmitter<any>()
+  categorySelectedData: any
+  
   financials = {
     // values on X-Axis
     labels: [
@@ -20,10 +22,7 @@ export class ManagementKpiCComponent implements OnInit {
       {
         label: 'Current Revenue', //chartId
         data: [21954.6, 1829.5, 29272.8, 14636, 3659.1],
-        backgroundColor: 'green',
-        borderColor: 'green',
-        borderWidth: '1',
-        fill: true,
+        borderWidth: '0',
       },
     ],
   };
@@ -38,8 +37,12 @@ export class ManagementKpiCComponent implements OnInit {
    }
 
   ngOnInit(): void {
+    this.categorySelected.subscribe((data) => {
+      this.categorySelectedData = data;
+    });
     this.changeCategory(this.financials)
   }
+
 
 
 }
