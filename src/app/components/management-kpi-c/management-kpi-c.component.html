@@ -2,24 +2,16 @@
   <h2 class="item1">MANAGEMENT KPI</h2>
   <nav class="item2">
     <button (click)="changeCategory(financials)">Financials</button>
-    <!-- <button (click)="changeCategory(inventory)">Inventory</button>
-        <button (click)="changeCategory(operations)">Operations</button>
-        <button (click)="changeCategory(productivity)">Productivity</button>
-        <button (click)="changeCategory(customer)">Customer Satisfaction</button>
-        <button (click)="changeCategory(safety)">Safety</button> -->
+    <button (click)="changeCategory(inventory)">Inventory</button>
+    <!-- <button (click)="changeCategory(operations)">Operations</button>
+    <button (click)="changeCategory(productivity)">Productivity</button>
+    <button (click)="changeCategory(customer)">Customer Satisfaction</button>
+    <button (click)="changeCategory(safety)">Safety</button> -->
   </nav>
   <div class="item3">
-    <app-performance-graph
-      *ngIf="categorySelectedCurrentData"
-      [data]="categorySelectedCurrentData"
-      chartType="doughnut"
-      scales="{yAxes: []}"
-    ></app-performance-graph>
-    <app-performance-graph
-      *ngIf="categorySelectedProjectedData"
-      [data]="categorySelectedProjectedData"
-      chartType="doughnut"
-      scales="{yAxes: []}"
-    ></app-performance-graph>
+    <app-performance-graph *ngIf="categorySelectedCurrentData" [data]="categorySelectedCurrentData" chartType="doughnut"
+      scales="{yAxes: []}"></app-performance-graph>
+    <app-performance-graph *ngIf="categorySelectedProjectedData" [data]="categorySelectedProjectedData"
+      chartType="doughnut" scales="{yAxes: []}"></app-performance-graph>
   </div>
 </div>

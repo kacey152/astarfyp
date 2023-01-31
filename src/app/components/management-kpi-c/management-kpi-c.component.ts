@@ -12,7 +12,6 @@ import {
   styleUrls: ['./management-kpi-c.component.css'],
 })
 export class ManagementKpiCComponent implements OnInit {
-  @Output() categorySelected = new EventEmitter<any>();
   categorySelectedCurrentData: any;
   categorySelectedProjectedData: any;
 
@@ -39,18 +38,38 @@ export class ManagementKpiCComponent implements OnInit {
       ],
     }
   };
+  inventory = {
+    current: {
+      // values on X-Axis
+      labels: ['Material', 'Others', 'Maintenance', 'Profit', 'Labour'],
+      datasets: [
+        {
+          label: 'Current Revenue', //chartId
+          data: [11954.6, 11829.5, 272.8, 4636, 1990.1],
+          borderWidth: '0',
+        },
+      ],
+    },
+    projected: {
+      labels: ['Material', 'Others', 'Maintenance', 'Profit', 'Labour'],
+      datasets: [
+        {
+          label: 'Projected Revenue', //chartId
+          data: [11954.6, 1829.5, 11829.8, 272, 3659.1],
+          borderWidth: '0',
+        },
+      ],
+    }
+  };
 
   changeCategory(category) {
-    this.categorySelected.emit(category);
+    this.categorySelectedCurrentData = category.current;
+    this.categorySelectedProjectedData = category.projected;
   }
 
   constructor() {}
 
   ngOnInit(): void {
-    this.categorySelected.subscribe((data) => {
-      this.categorySelectedCurrentData = data.current;
-      this.categorySelectedProjectedData = data.projected;
-    });
-    this.changeCategory(this.financials);
+    this.changeCategory(this.financials)
   }
 }

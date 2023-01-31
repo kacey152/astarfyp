@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, AfterViewInit} from '@angular/core';
+import { Component, Input, OnInit, OnChanges} from '@angular/core';
 import Chart from 'chart.js/auto';
 
 
@@ -12,12 +12,10 @@ export class PerformanceGraphComponent implements OnInit {
   @Input() data: any;
   @Input() chartType: any;
   @Input() scales: any;
-  @Input() plugins: any;
   
   chart: any;
   chartId: any;
   
-
   constructor() { }
 
   ngOnInit(): void {
@@ -36,7 +34,6 @@ export class PerformanceGraphComponent implements OnInit {
   }
 
   createChart(){
-
     var canvas = document.getElementById(this.chartId) as HTMLCanvasElement;
     var ctx = canvas.getContext('2d');
     this.chart = new Chart(ctx, {
@@ -48,6 +45,12 @@ export class PerformanceGraphComponent implements OnInit {
     }      
     });
   }
-
+  ngOnChanges(){
+    if (this.chart){
+      console.log(this.data)
+      this.chart.data = this.data
+      this.chart.update()
+    }
+  }
 }
 
