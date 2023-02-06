@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import { NgCircleProgressModule } from 'ng-circle-progress';
+import { GoogleMapsModule } from '@angular/google-maps';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -27,6 +28,7 @@ import { LogisticsTrackingBComponent } from './components/logistics-tracking-b/l
 import { DeliveryProgressComponent } from './components/delivery-progress/delivery-progress.component';
 import { ManagementKpiCComponent } from './components/management-kpi-c/management-kpi-c.component';
 import { MapComponent } from './components/map/map.component';
+
 
 @NgModule({
   declarations: [
@@ -58,6 +60,7 @@ import { MapComponent } from './components/map/map.component';
     BrowserModule,
     AppRoutingModule,
     MatProgressBarModule,
+    GoogleMapsModule,
     NgCircleProgressModule.forRoot({
       // Optional properties
       "radius": 100,

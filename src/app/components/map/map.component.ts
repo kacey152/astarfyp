@@ -6,7 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./map.component.css']
 })
 export class MapComponent implements OnInit {
-
+  height= "100%";
+  width= "100%";
+  zoom = 8;
   constructor() { }
 
   ngOnInit(): void {
