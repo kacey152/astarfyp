@@ -26,6 +26,7 @@ import { LogisticsTrackingComponent } from './components/logistics-tracking/logi
 import { LogisticsTrackingBComponent } from './components/logistics-tracking-b/logistics-tracking-b.component';
 import { DeliveryProgressComponent } from './components/delivery-progress/delivery-progress.component';
 import { ManagementKpiCComponent } from './components/management-kpi-c/management-kpi-c.component';
+import { MapComponent } from './components/map/map.component';
 
 @NgModule({
   declarations: [
@@ -51,6 +52,7 @@ import { ManagementKpiCComponent } from './components/management-kpi-c/managemen
     LogisticsTrackingBComponent,
     DeliveryProgressComponent,
     ManagementKpiCComponent,
+    MapComponent,
   ],
   imports: [
     BrowserModule,
