@@ -61,26 +61,30 @@ export class ResourceTrackingComponent implements OnInit,AfterViewInit {
     }
 
     private createControls = () => {
+      const container = document.getElementsByClassName('item2')[0];
       const renderer = new CSS2DRenderer();
-      renderer.setSize(window.innerWidth, window.innerHeight);
+      renderer.setSize(this.canvas.clientWidth, this.canvas.clientHeight);
       renderer.domElement.style.position = 'absolute';
-      renderer.domElement.style.top = '0px';
-      document.body.appendChild(renderer.domElement);
+      renderer.domElement.style.top = `${this.canvas.offsetTop}px`;
+      renderer.domElement.style.left = `${this.canvas.offsetLeft}px`;
+      renderer.domElement.style.width = `${this.canvas.clientWidth}px`;
+      renderer.domElement.style.height = `${this.canvas.clientHeight}px`;
+      container.appendChild(renderer.domElement);
       this.controls = new OrbitControls(this.camera, renderer.domElement);
       this.controls.autoRotate = true;
       this.controls.enableZoom = true;
       this.controls.enablePan = false;
-      this.controls.update();
+      this.controls.update(); 
     };
 
     private createScene() {
       //* Scene
       this.scene = new THREE.Scene();
-      this.scene.background = new THREE.Color(0xFFFFFF)
-      this.loaderGLTF.load('assets/Inkjet_Printer_30.gltf', (gltf: GLTF) => {
+      this.scene.background = new THREE.Color("white")
+      this.loaderGLTF.load('assets/sample.gltf', (gltf: GLTF) => {
         this.model = gltf.scene.children[0];
-        this.model.scale.set(0.01, 0.01, 0.01);
-        this.model.material.color.setHex( 0x808080 )
+        this.model.scale.set(0.04, 0.04, 0.04);
+        // this.model.material.color.setHex( 0x808080 )
         console.log(this.model);
         var box = new THREE.Box3().setFromObject(this.model);
         box.getCenter(this.model.position); // this re-sets the mesh position
