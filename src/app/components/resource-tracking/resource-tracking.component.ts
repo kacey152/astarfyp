@@ -80,10 +80,10 @@ export class ResourceTrackingComponent implements OnInit,AfterViewInit {
     private createScene() {
       //* Scene
       this.scene = new THREE.Scene();
-      this.scene.background = new THREE.Color("white")
-      this.loaderGLTF.load('assets/sample.gltf', (gltf: GLTF) => {
+      this.scene.background = new THREE.Color("grey")
+      this.loaderGLTF.load('assets/samplefloor.gltf', (gltf: GLTF) => {
         this.model = gltf.scene.children[0];
-        this.model.scale.set(0.04, 0.04, 0.04);
+        this.model.scale.set(0.03, 0.03, 0.03);
         // this.model.material.color.setHex( 0x808080 )
         console.log(this.model);
         var box = new THREE.Box3().setFromObject(this.model);
@@ -112,15 +112,15 @@ export class ResourceTrackingComponent implements OnInit,AfterViewInit {
       this.light1 = new THREE.PointLight(0x4b371c, 10);
       this.light1.position.set(0, 200, 400);
       this.scene.add(this.light1);
-      this.light2 = new THREE.PointLight(0x4b371c, 10);
-      this.light2.position.set(500, 100, 0);
-      this.scene.add(this.light2);
-      this.light3 = new THREE.PointLight(0x4b371c, 10);
-      this.light3.position.set(0, 100, -500);
-      this.scene.add(this.light3);
-      this.light4 = new THREE.PointLight(0x4b371c, 10);
-      this.light4.position.set(-500, 300, 500);
-      this.scene.add(this.light4);
+      // this.light2 = new THREE.PointLight(0x4b371c, 10);
+      // this.light2.position.set(500, 100, 0);
+      // this.scene.add(this.light2);
+      // this.light3 = new THREE.PointLight(0x4b371c, 10);
+      // this.light3.position.set(0, 100, -500);
+      // this.scene.add(this.light3);
+      // this.light4 = new THREE.PointLight(0x4b371c, 10);
+      // this.light4.position.set(-500, 300, 500);
+      // this.scene.add(this.light4);
     }
     private getAspectRatio() {
       return this.canvas.clientWidth / this.canvas.clientHeight;
