@@ -4,7 +4,28 @@
     <div class="item2">
         <h2 class="item2a">ENTERPRISE - PRODUCTION TRACKING</h2>
         <div class="item2b">
-
+            <svg>
+                <ng-container *ngFor="let circle of circles; let i = index">
+                    <circle [attr.cx]="circle.x" [attr.cy]="circle.y"
+                            [attr.r]="50"
+                            [attr.fill]="getColor(circle.status)">
+                    </circle>
+                    <text
+                    [attr.x]="circle.x"
+                    [attr.y]="circle.y"
+                    text-anchor="middle"
+                    dominant-baseline="central"
+                    font-size="24"
+                    fill="black"
+                  >
+                    {{ circle.value }}
+                  </text>
+                    <line *ngIf="i > 0" [attr.x1]="circles[i - 1].x" [attr.y1]="circles[i - 1].y"
+                        [attr.x2]="circle.x" [attr.y2]="circle.y"
+                        stroke="black" stroke-width="2">
+                    </line>
+                </ng-container>
+            </svg>
         </div>
         <div class="item2c">
             <h3>Order Information: {{orderNumber}}</h3>
