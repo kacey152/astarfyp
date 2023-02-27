@@ -7,7 +7,7 @@
             <svg>
                 <ng-container *ngFor="let circle of circles; let i = index">
                     <circle [attr.cx]="circle.x" [attr.cy]="circle.y"
-                            [attr.r]="50"
+                            [attr.r]="radius"
                             [attr.fill]="getColor(circle.status)">
                     </circle>
                     <text
@@ -20,12 +20,57 @@
                   >
                     {{ circle.value }}
                   </text>
-                    <line *ngIf="i > 0" [attr.x1]="circles[i - 1].x" [attr.y1]="circles[i - 1].y"
-                        [attr.x2]="circle.x" [attr.y2]="circle.y"
-                        stroke="black" stroke-width="2">
-                    </line>
+                  <line
+                    *ngIf="(i > 0 && i < 18 && i != 15 && i!=4) || i > 19 && i < 22"
+                    [attr.x1]="getx1(i)"
+                    [attr.y1]="gety1(i)"
+                    [attr.x2]="getx2(i)"
+                    [attr.y2]="gety2(i)"
+                    stroke="black"
+                    stroke-width="2"
+                ></line>
                 </ng-container>
-            </svg>
+                <!-- line 1 to 3 -->
+                <path
+                    [attr.d]="'M' + (circles[22].x + radius) + ' ' + circles[22].y + ' l' + (100 - radius*2)+ ' ' + (0)"
+                    stroke="black" stroke-width="2" fill="none">
+                </path>
+                <!-- line 1 to 4 -->
+                <path
+                    [attr.d]="'M' + (circles[0].x + radius) + ' ' + circles[0].y + ' l' + (100 - radius*2)+ ' ' + (0)"
+                    stroke="black" stroke-width="2" fill="none">
+                </path>
+                <!-- line 14 to 15 -->
+                <path
+                    [attr.d]="'M' + (circles[18].x + radius) + ' ' + circles[18].y + ' L' + (circles[18].x + 100)+ ' ' + (circles[18].y) + ' L' + (circles[18].x + 100) + ' ' + (circles[18].y - radius + 100)"
+                    stroke="black" stroke-width="2" fill="none">
+                </path>
+                <!-- line 16 to 17 -->
+                <path
+                    [attr.d]="'M' + (circles[21].x + radius) + ' ' + circles[21].y + ' L' + (circles[21].x + 100)+ ' ' + (circles[21].y) + ' L' + (circles[21].x + 100) + ' ' + (circles[21].y - radius + 100)"
+                    stroke="black" stroke-width="2" fill="none">
+                </path>
+                    <!-- MF Connect 4 to 1 (1) -->
+                <path
+                    [attr.d]="'M' + (circles[3].x + radius) + ' ' + circles[3].y + ' l' + (100 - radius*2)+ ' ' + (0)"
+                    stroke="black" stroke-dasharray="5,5" stroke-width="2" fill="none">
+                </path>
+                    <!-- MF Connect 4 to 1 (2) -->
+                <path
+                    [attr.d]="'M' + (circles[3].x) + ' ' + (circles[3].y + radius) + ' l0' + ' ' + (100-radius) + ' l' + (100-radius) + ' ' + 0"
+                    stroke="black" stroke-dasharray="5,5" stroke-width="2" fill="none">
+                </path>
+                    <!-- MF Connect 1 to 1 -->
+                <path
+                    [attr.d]="'M' + (circles[4].x) + ' ' + (circles[4].y + radius) + ' l0' + ' ' + (100-radius*2)"
+                    stroke="black" stroke-dasharray="5,5" stroke-width="2" fill="none">
+                </path>
+                    <!-- MF Connect 11 to 12 -->
+                <path
+                    [attr.d]="'M' + (circles[14].x + radius) + ' ' + (circles[14].y) + ' l' + (100-radius*2) + ' 0'"
+                    stroke="black" stroke-dasharray="5,5" stroke-width="2" fill="none">
+                </path>
+            </svg>            
         </div>
         <div class="item2c">
             <h3>Order Information: {{orderNumber}}</h3>
