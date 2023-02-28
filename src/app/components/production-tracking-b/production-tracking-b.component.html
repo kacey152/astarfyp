@@ -4,6 +4,11 @@
     <div class="item2">
         <h2 class="item2a">ENTERPRISE - PRODUCTION TRACKING</h2>
         <div class="item2b">
+            <div class="headers">
+                <h4>Smart Engineering System (SES)</h4>
+                <h4>Make to Stock (MTS)</h4>
+                <h4>Make to Order (MTO)</h4>
+            </div>
             <svg>
                 <ng-container *ngFor="let circle of circles; let i = index">
                     <circle [attr.cx]="circle.x" [attr.cy]="circle.y"
@@ -19,6 +24,17 @@
                     fill="black"
                   >
                     {{ circle.value }}
+                  </text>
+
+                    <text
+                    [attr.x]="getTextX(circle)"
+                    [attr.y]="getTextY(circle)"
+                    text-anchor="middle"
+                    dominant-baseline="central"
+                    font-size="12"
+                    fill="#c5dbdc"
+                  >
+                     {{circle.process}} 
                   </text>
                   <line
                     *ngIf="(i > 0 && i < 18 && i != 15 && i!=4) || i > 19 && i < 22"

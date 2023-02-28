@@ -28,6 +28,10 @@
 
 .item2b{
     border: 1px solid white;
+    background: linear-gradient(to right, #25292e 0%, #25292e 14%, #212528 14%, #212528 70.5%, #25292e 70.5%, #25292e 100%);
+    display: grid;
+    grid-template-rows: 12% 85%;
+    grid-row-gap: 4%;
 }
 
 .item2c{
@@ -37,10 +41,16 @@
 h3, h4{
     padding-left: 1%;
 }
+
+.headers{
+    display: grid;
+    grid-template-columns: 14% 56.5% 29.5%;
+    text-align: center;
+    border-bottom: 1px solid grey;
+    padding-bottom: 0;
+}
 svg{
     height: 100%;
     width: 100%;
-    background-color: #212528, white, red ;
-    background: linear-gradient(to right, #25292e 0%, #25292e 14%, #212528 14%, #212528 70.5%, #25292e 70.5%, #25292e 100%);
 }
 
