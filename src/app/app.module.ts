@@ -28,6 +28,7 @@ import { LogisticsTrackingBComponent } from './components/logistics-tracking-b/l
 import { DeliveryProgressComponent } from './components/delivery-progress/delivery-progress.component';
 import { ManagementKpiCComponent } from './components/management-kpi-c/management-kpi-c.component';
 import { MapComponent } from './components/map/map.component';
+import { ShopfloorModelComponent } from './components/shopfloor-model/shopfloor-model.component';
 
 
 @NgModule({
@@ -55,6 +56,7 @@ import { MapComponent } from './components/map/map.component';
     DeliveryProgressComponent,
     ManagementKpiCComponent,
     MapComponent,
+    ShopfloorModelComponent,
   ],
   imports: [
     BrowserModule,
