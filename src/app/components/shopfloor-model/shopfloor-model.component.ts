@@ -3,7 +3,7 @@ import * as THREE from "three";
 import { GLTFLoader, GLTF } from 'three/examples/jsm/loaders/GLTFLoader.js'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 import { CSS2DRenderer } from 'three/examples/jsm/renderers/CSS2DRenderer.js';
-import { OutlineEffect } from 'three-effectcomposer-es6';
+
 
 
 @Component({
@@ -106,7 +106,7 @@ export class ShopfloorModelComponent implements OnInit,AfterViewInit {
       this.scene.background = new THREE.Color("#14181b")
       this.loaderGLTF.load('assets/draft2.gltf', (gltf: GLTF) => {
         this.model = gltf.scene;
-        this.model.scale.set(0.3, 0.3, 0.3);
+        this.model.scale.set(0.28, 0.28, 0.28);
         var box = new THREE.Box3().setFromObject(this.model);
         box.getCenter(this.model.position); // this re-sets the mesh position
         this.model.position.multiplyScalar(-1);

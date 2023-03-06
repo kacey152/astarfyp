@@ -4,8 +4,7 @@
     background-color: #14181b;
     color: #b2e2dc;
     display: grid;
-    grid-template-rows: 10% 50% 30%;
-    row-gap: 2%;
+    grid-template-rows: 10% 48% 43%;
 }
 
 .item1{
@@ -16,7 +15,43 @@
     border-bottom: 1px solid lightslategray;
 }
 
-.item2{
+.item2, .item3{
     margin: 1%;
-    border: 1px solid white;
 }
+
+.item3{
+    display: flex;
+    justify-content: center;
+    gap: 3%;
+    margin-top: 0;
+}
+
+table {
+    border-collapse: collapse;
+    width: 30%;
+    height: 100%;
+  }
+
+  td, th {
+    border: 1px solid grey;
+    text-align: center;
+
+  }
+  
+  td:first-child {
+    width: 55%;
+  }
+  
+  td:nth-child(2), td:nth-child(3), td:nth-child(4) {
+    width: 15%;
+  }
+  
+  table tr:nth-child(even) {
+    background-color: #20252a;
+  }
+  table tr:nth-child(odd) {
+    background-color: #1a1f22;
+  }
+  table tr:first-child {
+    background-color: #15191c;
+  }
