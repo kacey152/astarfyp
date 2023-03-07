@@ -8,123 +8,51 @@
                 <tr>
                   <th colspan="4">Make to Stock Machines</th>
                 </tr>
-                <tr>
-                  <td>Injection Moulding</td>
-                  <td>Icon</td>
-                  <td>Icon</td>
-                  <td>Icon</td>
-                </tr>
-                <tr>
-                  <td>InfraRed Oven 1</td>
-                  <td>Icon</td>
-                  <td>Icon</td>
-                  <td>Icon</td>
-                </tr>
-                <tr>
-                  <td>Infrared Oven 2</td>
-                  <td>Icon</td>
-                  <td>Icon</td>
-                  <td>Icon</td>
-                </tr>
-                <tr>
-                  <td>Screen Printer 1</td>
-                  <td>Icon</td>
-                  <td>Icon</td>
-                  <td>Icon</td>
-                </tr>
-                <tr>
-                  <td>Screen Printer 2</td>
-                  <td>Icon</td>
-                  <td>Icon</td>
-                  <td>Icon</td>
-                </tr>
-                <tr>
-                  <td>Membrane Assembly</td>
-                  <td>Icon</td>
-                  <td>Icon</td>
-                  <td>Icon</td>
-                </tr>
-                <tr>
-                  <td>Laser Welding</td>
-                  <td>Icon</td>
-                  <td>Icon</td>
-                  <td>Icon</td>
-                </tr>
-                <tr>
-                  <td>Laser Trimming</td>
-                  <td>Icon</td>
-                  <td>Icon</td>
-                  <td>Icon</td>
-                </tr>
-                <tr>
-                  <td>Cartridge Tester</td>
-                  <td>Icon</td>
-                  <td>Icon</td>
-                  <td>Icon</td>
+                <tr *ngFor="let machine of mts">
+                  <td>{{machine.name}}</td>
+                  <td>
+                    <i class="fa-solid fa-power-off" [ngStyle]="{ color: getColour(machine.powerStatus) }"></i>
+                  </td>
+                  <td>
+                    <i class="fa-solid fa-bolt-lightning" [ngStyle]="{color: getColour(machine.electricalStatus)}"></i>
+                  </td>
+                  <td>
+                    <i class="fa-regular fa-trash-can" [ngStyle]="{color: getColour(machine.disposalStatus)}"></i>
+                  </td>
                 </tr>
               </table>
               <table>
                 <tr>
                   <th colspan="4">Smart Engineering System(SES)</th>
                 </tr>
-                <tr>
-                  <td>Milling</td>
-                  <td>Icon</td>
-                  <td>Icon</td>
-                  <td>Icon</td>
-                </tr>
-                <tr>
-                  <td>EDM</td>
-                  <td>Icon</td>
-                  <td>Icon</td>
-                  <td>Icon</td>
-                </tr>
-                <tr>
-                  <td>CMM</td>
-                  <td>Icon</td>
-                  <td>Icon</td>
-                  <td>Icon</td>
-                </tr>
-                <tr>
-                  <td>Robotic Arm</td>
-                  <td>Icon</td>
-                  <td>Icon</td>
-                  <td>Icon</td>
+                <tr *ngFor="let machine of ses">
+                  <td>{{machine.name}}</td>
+                  <td>
+                    <i class="fa-solid fa-power-off" [ngStyle]="{color: getColour(machine.powerStatus)}"></i>
+                  </td>
+                  <td>
+                    <i class="fa-solid fa-bolt-lightning" [ngStyle]="{color: getColour(machine.electricalStatus)}"></i>
+                  </td>
+                  <td>
+                    <i class="fa-regular fa-trash-can" [ngStyle]="{color: getColour(machine.disposalStatus)}"></i>
+                  </td>
                 </tr>
               </table>
               <table>
                 <tr>
                   <th colspan="4">Make to Order Machines</th>
                 </tr>
-                <tr>
-                  <td>Holder Assembly</td>
-                  <td>Icon</td>
-                  <td>Icon</td>
-                  <td>Icon</td>
-                </tr>
-                <tr>
-                  <td>Scent Filling</td>
-                  <td>Icon</td>
-                  <td>Icon</td>
-                  <td>Icon</td>
-                </tr>
-                <tr>
-                  <td>Holder Tester</td>
-                  <td>Icon</td>
-                  <td>Icon</td>
-                  <td>Icon</td>
-                </tr>
-                <tr>
-                  <td>Inkjet Printer</td>
-                  <td>Icon</td>
-                  <td>Icon</td>
-                  <td>Icon</td>
-                </tr>
-                <tr>
-                  <td>LEAN Packaging</td>
-                  <td>Icon</td>
-                  <td>Icon</td>
-                  <td>Icon</td>
+                <tr *ngFor="let machine of mto">
+                  <td>{{machine.name}}</td>
+                  <td>
+                    <i class="fa-solid fa-power-off" [ngStyle]="{ color: getColour(machine.powerStatus) }"></i>
+                  </td>
+                  <td>
+                    <i class="fa-solid fa-bolt-lightning" [ngStyle]="{color: getColour(machine.electricalStatus)}"></i>
+                  </td>
+                  <td>
+                    <i class="fa-regular fa-trash-can" [ngStyle]="{color: getColour(machine.disposalStatus)}"></i>
+                  </td>
                 </tr>
               </table>
     </div>
