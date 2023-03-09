@@ -27,7 +27,7 @@
 
 .item2b{
     border: 1px solid white;
-    background: linear-gradient(to right, #25292e 0%, #25292e 14%, #212528 14%, #212528 70.5%, #25292e 70.5%, #25292e 100%);
+    background: linear-gradient(to right, #25292e 0%, #25292e 13%, #212528 13%, #212528 73%, #25292e 73%, #25292e 100%);
     display: grid;
     grid-template-rows: 12% 85%;
     grid-row-gap: 4%;

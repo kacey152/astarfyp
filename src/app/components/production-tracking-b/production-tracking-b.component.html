@@ -3,21 +3,21 @@
 
     <div class="item2">
         <h2 class="item2a">ENTERPRISE - PRODUCTION TRACKING</h2>
-        <div class="item2b">
+        <div #parentcontainer class="item2b">
             <div class="headers">
                 <h4>Smart Engineering System (SES)</h4>
                 <h4>Make to Stock (MTS)</h4>
                 <h4>Make to Order (MTO)</h4>
             </div>
-            <svg>
+            <svg class="mrt">
                 <ng-container *ngFor="let circle of circles; let i = index">
-                    <circle [attr.cx]="circle.x" [attr.cy]="circle.y"
+                    <circle [attr.cx]="circle.x + '%'" [attr.cy]="circle.y+ '%'"
                             [attr.r]="radius"
                             [attr.fill]="getColor(circle.status)">
                     </circle>
                     <text
-                    [attr.x]="circle.x"
-                    [attr.y]="circle.y"
+                    [attr.x]="circle.x + '%'"
+                    [attr.y]="circle.y + '%'"
                     text-anchor="middle"
                     dominant-baseline="central"
                     font-size="24"
@@ -27,8 +27,8 @@
                   </text>
 
                     <text
-                    [attr.x]="getTextX(circle)"
-                    [attr.y]="getTextY(circle)"
+                    [attr.x]="getTextX(circle)+ '%'"
+                    [attr.y]="getTextY(circle)+ '%'"
                     text-anchor="middle"
                     dominant-baseline="central"
                     font-size="12"
@@ -38,52 +38,59 @@
                   </text>
                   <line
                     *ngIf="(i > 0 && i < 18 && i != 15 && i!=4) || i > 19 && i < 22"
-                    [attr.x1]="getx1(i)"
-                    [attr.y1]="gety1(i)"
-                    [attr.x2]="getx2(i)"
-                    [attr.y2]="gety2(i)"
+                    [attr.x1]="getx1(i) +'%'"
+                    [attr.y1]="gety1(i) +'%'"
+                    [attr.x2]="getx2(i) +'%'"
+                    [attr.y2]="gety2(i) +'%'"
                     stroke="black"
                     stroke-width="2"
                 ></line>
                 </ng-container>
+                <!-- X gap is 0.06 * parentWidth, Y gap is 0.25 * parentHeight -->
+
                 <!-- line 1 to 3 -->
                 <path
-                    [attr.d]="'M' + (circles[22].x + radius) + ' ' + circles[22].y + ' l' + (100 - radius*2)+ ' ' + (0)"
+                    [attr.d]="'M' + (circles[22].x * parentWidth/100 + radius) + ' ' + circles[22].y * parentHeight/100 + ' l' + (0.06*parentWidth - radius*2)+ ' ' + (0)"
                     stroke="black" stroke-width="2" fill="none">
                 </path>
                 <!-- line 1 to 4 -->
                 <path
-                    [attr.d]="'M' + (circles[0].x + radius) + ' ' + circles[0].y + ' l' + (100 - radius*2)+ ' ' + (0)"
+                    [attr.d]="'M' + (circles[0].x * parentWidth/100 + radius) + ' ' + circles[0].y * parentHeight/100 + ' l' + (0.06*parentWidth - radius*2)+ ' ' + (0)"
+                    stroke="black" stroke-width="2" fill="none">
+                </path>
+                <!-- line 12 to 13 -->
+                <path
+                    [attr.d]="'M' + (circles[15].x * parentWidth/100 + radius) + ' ' + circles[16].y * parentHeight/100 + ' l' + (0.06*parentWidth*2 - radius*2)+ ' ' + (0)"
                     stroke="black" stroke-width="2" fill="none">
                 </path>
                 <!-- line 14 to 15 -->
                 <path
-                    [attr.d]="'M' + (circles[18].x + radius) + ' ' + circles[18].y + ' L' + (circles[18].x + 100)+ ' ' + (circles[18].y) + ' L' + (circles[18].x + 100) + ' ' + (circles[18].y - radius + 100)"
+                    [attr.d]="'M' + (circles[18].x * parentWidth/100 + radius) + ' ' + circles[18].y * parentHeight/100 + ' l' + (0.06*parentWidth - radius)+ ' ' + (0) + ' l0' + ' ' + (0.25*parentHeight - radius)"
                     stroke="black" stroke-width="2" fill="none">
                 </path>
                 <!-- line 16 to 17 -->
                 <path
-                    [attr.d]="'M' + (circles[21].x + radius) + ' ' + circles[21].y + ' L' + (circles[21].x + 100)+ ' ' + (circles[21].y) + ' L' + (circles[21].x + 100) + ' ' + (circles[21].y - radius + 100)"
+                    [attr.d]="'M' + (circles[21].x * parentWidth/100 + radius) + ' ' + circles[21].y * parentHeight/100 + ' l' + (0.06*parentWidth - radius)+ ' ' + (0) + ' l0' + ' ' + (0.25*parentHeight - radius)"
                     stroke="black" stroke-width="2" fill="none">
                 </path>
                     <!-- MF Connect 4 to 1 (1) -->
                 <path
-                    [attr.d]="'M' + (circles[3].x + radius) + ' ' + circles[3].y + ' l' + (100 - radius*2)+ ' ' + (0)"
+                    [attr.d]="'M' + (circles[3].x * parentWidth/100 + radius) + ' ' + circles[3].y * parentHeight/100 + ' l' + (0.06*parentWidth - radius*2)+ ' ' + (0)"
                     stroke="black" stroke-dasharray="5,5" stroke-width="2" fill="none">
                 </path>
                     <!-- MF Connect 4 to 1 (2) -->
                 <path
-                    [attr.d]="'M' + (circles[3].x) + ' ' + (circles[3].y + radius) + ' l0' + ' ' + (100-radius) + ' l' + (100-radius) + ' ' + 0"
+                    [attr.d]="'M' + (circles[3].x * parentWidth/100) + ' ' + (circles[3].y * parentHeight/100 + radius) + ' l0' + ' ' + (0.25*parentHeight -radius) + ' l' + (0.06*parentWidth-radius) + ' ' + 0"
                     stroke="black" stroke-dasharray="5,5" stroke-width="2" fill="none">
                 </path>
                     <!-- MF Connect 1 to 1 -->
                 <path
-                    [attr.d]="'M' + (circles[4].x) + ' ' + (circles[4].y + radius) + ' l0' + ' ' + (100-radius*2)"
+                    [attr.d]="'M' + (circles[4].x * parentWidth/100) + ' ' + (circles[4].y * parentHeight/100 + radius) + ' l0' + ' ' + (0.25*parentHeight -radius*2)"
                     stroke="black" stroke-dasharray="5,5" stroke-width="2" fill="none">
                 </path>
                     <!-- MF Connect 11 to 12 -->
                 <path
-                    [attr.d]="'M' + (circles[14].x + radius) + ' ' + (circles[14].y) + ' l' + (100-radius*2) + ' 0'"
+                    [attr.d]="'M' + (circles[14].x * parentWidth/100 + radius) + ' ' + (circles[14].y * parentHeight/100) + ' l' + (0.06*parentWidth -radius*2) + ' 0'"
                     stroke="black" stroke-dasharray="5,5" stroke-width="2" fill="none">
                 </path>
             </svg>            

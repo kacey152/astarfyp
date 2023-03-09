@@ -6,30 +6,21 @@
             <th class="col3">Progress</th>
             <th class="col4">Last Updated</th>
         </tr>
-        
-        <!-- <div *ngIf="processCustomer=='Customer Name'"> -->
-        <!-- <div *ngIf="processCustomer=='Process Stage'"> -->
-
-        <tr> <!--Sample Sales Order-->
-            <td>ET-19-0002</td>
-            <td>TOUR VIP</td>
-            <td>100%</td>
-            <td>10:01</td>
-        </tr>
-
-        <tr> <!--Sample Sales Order-->
-            <td>ET-19-0001</td>
-            <td>VIP GUEST</td>
-            <td>80%</td>
-            <td>10:03</td>
-        </tr>
-
-        <tr> <!--Sample Sales Order-->
-            <td>EX-19-0001</td>
-            <td>SES TEST</td>
-            <td>80%</td>
-            <td>10:07</td>
-        </tr>
-
+        <ng-container *ngIf="processCustomer=='Customer Name'">
+            <tr *ngFor="let order of customerNameOrders">
+                <td>{{order.orderNumber}}</td>
+                <td>{{order.customerName}}</td>
+                <td>{{order.progress}}</td>
+                <td>{{order.lastUpdated}}</td>
+            </tr>
+        </ng-container>
+        <ng-container *ngIf="processCustomer=='Process Stage'">
+            <tr *ngFor="let order of processOrders">
+                <td>{{order.orderNumber}}</td>
+                <td>{{order.processName}}</td>
+                <td>{{order.progress}}</td>
+                <td>{{order.lastUpdated}}</td>
+            </tr>
+        </ng-container>
     </table>
 </div>
