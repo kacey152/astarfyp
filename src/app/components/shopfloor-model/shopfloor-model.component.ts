@@ -104,7 +104,8 @@ export class ShopfloorModelComponent implements OnInit,AfterViewInit {
       //* Scene
       this.scene = new THREE.Scene();
       this.scene.background = new THREE.Color("#14181b")
-      this.loaderGLTF.load('assets/draft2.gltf', (gltf: GLTF) => {
+      // 3d model will be in assets folder
+      this.loaderGLTF.load('assets/3dfloor.gltf', (gltf: GLTF) => {
         this.model = gltf.scene;
         this.model.scale.set(0.28, 0.28, 0.28);
         var box = new THREE.Box3().setFromObject(this.model);
